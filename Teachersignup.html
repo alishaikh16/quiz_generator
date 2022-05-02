@@ -1,0 +1,91 @@
+<html>
+<head>
+<title> SIGN UP </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<link rel="stylesheet" href="mystyle.css">
+<script type="text/javascript">
+function validation()
+{
+
+ var flag = true;
+if(document.regform.uname.value=="")
+ {
+   alert("Please Enter Your Name.");
+   flag=false;
+ }
+ if(document.regform.email.value=="")
+ {
+   alert("Please Enter Your Email id.");
+   flag=false;
+ }
+if(document.regform.pass.value!="" || document.regform.pass.value=="")
+ {
+ if(document.regform.repass.value.length<6 || document.regform.pass.value.length>15)
+ {
+   alert("Password must be greater than 6 character and less than 15 character");
+   flag=false;
+ }
+}
+var ad = 6221
+if(document.regform.admin.value!=ad)
+{
+alert("Please Enter Correct Admin Password");
+flag = false;
+}
+
+if(document.regform.repass.value!="" && document.regform.pass.value!="")
+{
+ if(document.regform.pass.value!=document.regform.repass.value)
+ {
+   alert("Both Password Should Be Same");
+   flag=false;
+ }
+}
+ var email = document.regform.email.value;
+ var a = email.indexOf("@");
+ var d = email.lastIndexOf(".");
+if(document.regform.email.value!="")
+{
+ if(d+3>email.length || a<1 || d<a+4 || !email.includes("@") || !email.includes("."))
+ {
+   alert("Please Enter Valid Email Id.");
+   flag=false;
+ }
+}
+return flag;
+}
+</script>
+<style>
+h1{font-size:36px;}
+label{font-size:22px;}
+	</style>
+<title> Registration Form </title>
+
+</head>
+<body align="centers">
+<form name="regform" method="post" action="teacherregister.php" onsubmit="return validation()">
+<fieldset>
+<legend align="center"> <h1>Teacher Registration</h1> </legend>
+<h3><label for="uname">Name:</label>
+<input type="text" autocomplete=on name="uname"><br>
+<label for="email">Email:</label>
+<input type="text"  name="email"><br>
+<label for="pass">Password:</label>
+<input type="password"  name="pass"><br>
+
+<label for="repass" >Confirm Password:</label>
+<input type="password"  name="repass" style="width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;"><br>
+<label for="admin">Admin Password:</label>
+<input type="password"  name="admin" required><br></h3>
+
+
+
+<input type="submit" name="submit" value="Sign Up">
+</fieldset>
+</form>
+</body>
+</html>
+ 

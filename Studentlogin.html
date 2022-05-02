@@ -1,0 +1,64 @@
+<html>
+<head>
+<title> LOGIN </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<script type="text/javascript">
+function validation()
+{
+ var flag = true;
+
+ if(document.regform.email.value=="")
+ {
+   alert("Please Enter Your Email Id ");
+   flag=false;
+ }
+ if(document.regform.pass.value=="")
+ {
+   alert("Please Enter Your Password.");
+   flag=false;
+ }
+ var email = document.regform.email.value;
+ var a = email.indexOf("@");
+ var d = email.lastIndexOf(".");
+if(document.regform.email.value!="")
+{
+ if(d+3>email.length || a<1 || d<a+4 || !email.includes("@") || !email.includes("."))
+ {
+   alert("Please Enter Valid Email Id Or Create New Account");
+   flag=false;
+ }
+}
+return flag;
+}
+</script>
+<style>
+input:hover[type="submit"]{
+color:white;
+background-color:darkred;
+}
+button:hover {
+color:white;
+background-color:darkred;
+}
+h1{font-size:40px;}
+</style>
+<title> Registration Form </title>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body align ="centers">
+<br><br>
+<fieldset>
+<form name="regform" method="post" action="studentcheck.php" onsubmit=" return validation()">
+
+<legend align ="center"> <h1>Student Login</h1> </legend>
+<label for="email">Email:</label>
+<input type="text"  name="email"><br>
+<label for="pass">Password:</label>
+<input type="password"  name="pass"><br>
+<input type="submit" name="submit" value="Login">
+</form>
+<button onclick="location.href = 'Studentsignup.html';" id="myButton;">Create A New Login</button>
+</fieldset>
+</body>
+</html>
+ 

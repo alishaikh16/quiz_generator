@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+body {
+
+  font-family: 'Mate SC', serif;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 2;
+  color: darksalmon;
+  background:white;
+  background-image: url("perlbg1.jpg");
+background-repeat: no-repeat;
+background-size:cover; 
+
+  }
+mark {
+	 background-color: darkred;
+    color: white;
+}
+button {
+font-family: 'Mate SC', serif;
+background-color: white;
+    border: none;
+    color: darkred;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: larger;
+    font-weight: bold;
+}
+
+fieldset{margin:auto;
+			Width:450px;
+			padding:10px 30px; border: 6px solid darkred;}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: white;
+    border: none;
+    color: darkred;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: x-large;
+    font-weight: 800;
+    font-family: 'Mate SC';
+}
+input[type=text],input[type=password] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+color:darkred;
+font-size:large;
+}
+input:hover[type="submit"]{
+color:white;
+background-color:darkred;
+}
+button:hover {
+color:white;
+background-color:darkred;
+}
